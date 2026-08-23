@@ -1,0 +1,31 @@
+# Copy this file to config.yml and fill in real values.
+# NEVER commit config.yml — it is in .gitignore.
+# Prefer environment variables / GitHub Secrets in production;
+# this file is mainly for local testing.
+
+imou:
+  app_id: "YOUR_IMOU_OPEN_APP_ID"
+  app_secret: "YOUR_IMOU_OPEN_APP_SECRET"
+  device_id: "YOUR_CAMERA_DEVICE_ID"      # from Imou Life app > device > settings > device info
+  channel_id: "0"                          # usually "0" for single-channel cameras
+  api_base: "https://openapi.easy4ip.com/openapi"
+
+shine:
+  # "Shine" (Growatt ShinePhone) portal credentials
+  username: "YOUR_SHINE_USERNAME"
+  password: "YOUR_SHINE_PASSWORD"
+  plant_id: "YOUR_PLANT_ID"                # find in ShinePhone/ShineServer plant URL
+  api_base: "https://server.growatt.com"
+
+twilio:
+  account_sid: "YOUR_TWILIO_ACCOUNT_SID"
+  auth_token: "YOUR_TWILIO_AUTH_TOKEN"
+  from_whatsapp: "whatsapp:+14155238886"   # Twilio sandbox number by default
+  to_whatsapp: "whatsapp:+91XXXXXXXXXX"    # your WhatsApp number, E.164 format
+
+monitor:
+  poll_interval_seconds: 60
+  alert_cooldown_seconds: 300              # avoid spamming repeated motion alerts
+
+scheduler:
+  daily_report_time: "19:00"               # 24h format, local server time
